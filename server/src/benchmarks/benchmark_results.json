@@ -1,0 +1,1072 @@
+{
+  "rankingData": [
+    {
+      "n": 100,
+      "heapTimeMs": 1.2266,
+      "mergeSortTimeMs": 1.0029,
+      "linearScanTimeMs": 0.8402,
+      "heapOperations": 33,
+      "mergeSortOperations": 486,
+      "linearScanOperations": 92
+    },
+    {
+      "n": 500,
+      "heapTimeMs": 3.5277,
+      "mergeSortTimeMs": 4.208,
+      "linearScanTimeMs": 2.9179,
+      "heapOperations": 40,
+      "mergeSortOperations": 3472,
+      "linearScanOperations": 458
+    },
+    {
+      "n": 1000,
+      "heapTimeMs": 5.8329,
+      "mergeSortTimeMs": 6.0908,
+      "linearScanTimeMs": 4.5616,
+      "heapOperations": 40,
+      "mergeSortOperations": 7861,
+      "linearScanOperations": 917
+    },
+    {
+      "n": 5000,
+      "heapTimeMs": 25.3524,
+      "mergeSortTimeMs": 28.9054,
+      "linearScanTimeMs": 24.4154,
+      "heapOperations": 40,
+      "mergeSortOperations": 49925,
+      "linearScanOperations": 4583
+    },
+    {
+      "n": 10000,
+      "heapTimeMs": 52.4426,
+      "mergeSortTimeMs": 63.9419,
+      "linearScanTimeMs": 49.0867,
+      "heapOperations": 40,
+      "mergeSortOperations": 108975,
+      "linearScanOperations": 9167
+    },
+    {
+      "n": 50000,
+      "heapTimeMs": 237.9261,
+      "mergeSortTimeMs": 360.9291,
+      "linearScanTimeMs": 257.9277,
+      "heapOperations": 40,
+      "mergeSortOperations": 650930,
+      "linearScanOperations": 45833
+    }
+  ],
+  "searchData": [
+    {
+      "m": 1000,
+      "binarySearchTimeMs": 0.06194,
+      "jumpSearchTimeMs": 0.07372,
+      "linearSearchTimeMs": 0.09664,
+      "binarySearchComparisons": 9,
+      "jumpSearchComparisons": 32,
+      "linearSearchComparisons": 751
+    },
+    {
+      "m": 10000,
+      "binarySearchTimeMs": 0.0104,
+      "jumpSearchTimeMs": 0.02172,
+      "linearSearchTimeMs": 0.82976,
+      "binarySearchComparisons": 13,
+      "jumpSearchComparisons": 77,
+      "linearSearchComparisons": 7501
+    },
+    {
+      "m": 50000,
+      "binarySearchTimeMs": 0.00848,
+      "jumpSearchTimeMs": 0.03226,
+      "linearSearchTimeMs": 0.14268,
+      "binarySearchComparisons": 15,
+      "jumpSearchComparisons": 206,
+      "linearSearchComparisons": 37501
+    },
+    {
+      "m": 100000,
+      "binarySearchTimeMs": 0.00854,
+      "jumpSearchTimeMs": 0.04346,
+      "linearSearchTimeMs": 0.283,
+      "binarySearchComparisons": 16,
+      "jumpSearchComparisons": 347,
+      "linearSearchComparisons": 75001
+    },
+    {
+      "m": 500000,
+      "binarySearchTimeMs": 0.01672,
+      "jumpSearchTimeMs": 0.10428,
+      "linearSearchTimeMs": 1.52456,
+      "binarySearchComparisons": 18,
+      "jumpSearchComparisons": 822,
+      "linearSearchComparisons": 375001
+    },
+    {
+      "m": 1000000,
+      "binarySearchTimeMs": 0.01752,
+      "jumpSearchTimeMs": 0.19516,
+      "linearSearchTimeMs": 75,
+      "binarySearchComparisons": 19,
+      "jumpSearchComparisons": 752,
+      "linearSearchComparisons": 750000
+    }
+  ],
+  "qualityData": [
+    {
+      "instanceSize": {
+        "ordersCount": 2,
+        "trucksCount": 4
+      },
+      "exhaustiveOptimal": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2350,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.638,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 2,
+              "code": "TRK-02",
+              "model": "Mitsubishi Fuso Canter",
+              "currentLocation": "Negombo",
+              "capacityKg": 4200,
+              "usedKg": 2250,
+              "availableAtMinutes": 0,
+              "driverName": "Sunil Silva",
+              "costPerKm": 2.1
+            },
+            "score": 0.5964,
+            "profit": 620
+          }
+        ],
+        "totalProfit": 1070,
+        "totalScore": 1.2344,
+        "executionTimeMs": 0.6214,
+        "statesExplored": 26
+      },
+      "greedyHeuristic": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2350,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.638,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 2,
+              "code": "TRK-02",
+              "model": "Mitsubishi Fuso Canter",
+              "currentLocation": "Negombo",
+              "capacityKg": 4200,
+              "usedKg": 2250,
+              "availableAtMinutes": 0,
+              "driverName": "Sunil Silva",
+              "costPerKm": 2.1
+            },
+            "score": 0.5964,
+            "profit": 620
+          }
+        ],
+        "totalProfit": 1070,
+        "totalScore": 1.2344,
+        "executionTimeMs": 0.1101,
+        "statesExplored": 8
+      },
+      "qualityMetrics": {
+        "profitApproximationRatio": 100,
+        "scoreApproximationRatio": 100,
+        "profitGap": 0,
+        "scoreGap": 0,
+        "speedupFactor": 5.6,
+        "isOptimal": true
+      },
+      "analysisExplanation": "High heuristic efficiency: Greedy decision achieved 100% of global optimal profit with a 5.6x speedup, demonstrating that polynomial heuristic decision scoring achieves near-perfect allocation without exponential overhead."
+    },
+    {
+      "instanceSize": {
+        "ordersCount": 4,
+        "trucksCount": 6
+      },
+      "exhaustiveOptimal": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2350,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.638,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 5,
+              "code": "TRK-05",
+              "model": "Hino 500 Series",
+              "currentLocation": "Galle",
+              "capacityKg": 7500,
+              "usedKg": 4600,
+              "availableAtMinutes": 30,
+              "driverName": "Chaminda Rajapakse",
+              "costPerKm": 2.9
+            },
+            "score": 0.653,
+            "profit": 620
+          },
+          {
+            "order": {
+              "id": 103,
+              "trackingNumber": "ORD-9823",
+              "destination": "Jaffna",
+              "weight": 2200,
+              "profit": 1250,
+              "deadlineMinutes": 600,
+              "priority": 5,
+              "createdAt": "2026-08-26 11:00",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4300,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.6993,
+            "profit": 1250
+          },
+          {
+            "order": {
+              "id": 104,
+              "trackingNumber": "ORD-9824",
+              "destination": "Trincomalee",
+              "weight": 650,
+              "profit": 380,
+              "deadlineMinutes": 360,
+              "priority": 2,
+              "createdAt": "2026-08-26 11:45",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4950,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.4378,
+            "profit": 380
+          }
+        ],
+        "totalProfit": 2700,
+        "totalScore": 2.4281,
+        "executionTimeMs": 7.6098,
+        "statesExplored": 1078
+      },
+      "greedyHeuristic": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2350,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.638,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 5,
+              "code": "TRK-05",
+              "model": "Hino 500 Series",
+              "currentLocation": "Galle",
+              "capacityKg": 7500,
+              "usedKg": 4600,
+              "availableAtMinutes": 30,
+              "driverName": "Chaminda Rajapakse",
+              "costPerKm": 2.9
+            },
+            "score": 0.653,
+            "profit": 620
+          },
+          {
+            "order": {
+              "id": 103,
+              "trackingNumber": "ORD-9823",
+              "destination": "Jaffna",
+              "weight": 2200,
+              "profit": 1250,
+              "deadlineMinutes": 600,
+              "priority": 5,
+              "createdAt": "2026-08-26 11:00",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4300,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.6993,
+            "profit": 1250
+          },
+          {
+            "order": {
+              "id": 104,
+              "trackingNumber": "ORD-9824",
+              "destination": "Trincomalee",
+              "weight": 650,
+              "profit": 380,
+              "deadlineMinutes": 360,
+              "priority": 2,
+              "createdAt": "2026-08-26 11:45",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4950,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.4378,
+            "profit": 380
+          }
+        ],
+        "totalProfit": 2700,
+        "totalScore": 2.4281,
+        "executionTimeMs": 0.1798,
+        "statesExplored": 24
+      },
+      "qualityMetrics": {
+        "profitApproximationRatio": 100,
+        "scoreApproximationRatio": 100,
+        "profitGap": 0,
+        "scoreGap": 0,
+        "speedupFactor": 42.3,
+        "isOptimal": true
+      },
+      "analysisExplanation": "High heuristic efficiency: Greedy decision achieved 100% of global optimal profit with a 42.3x speedup, demonstrating that polynomial heuristic decision scoring achieves near-perfect allocation without exponential overhead."
+    },
+    {
+      "instanceSize": {
+        "ordersCount": 5,
+        "trucksCount": 8
+      },
+      "exhaustiveOptimal": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2350,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.638,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 5,
+              "code": "TRK-05",
+              "model": "Hino 500 Series",
+              "currentLocation": "Galle",
+              "capacityKg": 7500,
+              "usedKg": 4600,
+              "availableAtMinutes": 30,
+              "driverName": "Chaminda Rajapakse",
+              "costPerKm": 2.9
+            },
+            "score": 0.653,
+            "profit": 620
+          },
+          {
+            "order": {
+              "id": 103,
+              "trackingNumber": "ORD-9823",
+              "destination": "Jaffna",
+              "weight": 2200,
+              "profit": 1250,
+              "deadlineMinutes": 600,
+              "priority": 5,
+              "createdAt": "2026-08-26 11:00",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4300,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.6993,
+            "profit": 1250
+          },
+          {
+            "order": {
+              "id": 104,
+              "trackingNumber": "ORD-9824",
+              "destination": "Trincomalee",
+              "weight": 650,
+              "profit": 380,
+              "deadlineMinutes": 360,
+              "priority": 2,
+              "createdAt": "2026-08-26 11:45",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4950,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.4378,
+            "profit": 380
+          },
+          {
+            "order": {
+              "id": 105,
+              "trackingNumber": "ORD-9825",
+              "destination": "Matara",
+              "weight": 3100,
+              "profit": 980,
+              "deadlineMinutes": 300,
+              "priority": 4,
+              "createdAt": "2026-08-26 12:20",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 7,
+              "code": "TRK-07",
+              "model": "Isuzu Forward 8T",
+              "currentLocation": "Colombo",
+              "capacityKg": 8000,
+              "usedKg": 5100,
+              "availableAtMinutes": 60,
+              "driverName": "Mahesh Gunasekara",
+              "costPerKm": 3.1
+            },
+            "score": 0.6842,
+            "profit": 980
+          }
+        ],
+        "totalProfit": 3680,
+        "totalScore": 3.1123,
+        "executionTimeMs": 68.0097,
+        "statesExplored": 8660
+      },
+      "greedyHeuristic": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2350,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.638,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 5,
+              "code": "TRK-05",
+              "model": "Hino 500 Series",
+              "currentLocation": "Galle",
+              "capacityKg": 7500,
+              "usedKg": 4600,
+              "availableAtMinutes": 30,
+              "driverName": "Chaminda Rajapakse",
+              "costPerKm": 2.9
+            },
+            "score": 0.653,
+            "profit": 620
+          },
+          {
+            "order": {
+              "id": 103,
+              "trackingNumber": "ORD-9823",
+              "destination": "Jaffna",
+              "weight": 2200,
+              "profit": 1250,
+              "deadlineMinutes": 600,
+              "priority": 5,
+              "createdAt": "2026-08-26 11:00",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4300,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.6993,
+            "profit": 1250
+          },
+          {
+            "order": {
+              "id": 104,
+              "trackingNumber": "ORD-9824",
+              "destination": "Trincomalee",
+              "weight": 650,
+              "profit": 380,
+              "deadlineMinutes": 360,
+              "priority": 2,
+              "createdAt": "2026-08-26 11:45",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4950,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.4378,
+            "profit": 380
+          },
+          {
+            "order": {
+              "id": 105,
+              "trackingNumber": "ORD-9825",
+              "destination": "Matara",
+              "weight": 3100,
+              "profit": 980,
+              "deadlineMinutes": 300,
+              "priority": 4,
+              "createdAt": "2026-08-26 12:20",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 7,
+              "code": "TRK-07",
+              "model": "Isuzu Forward 8T",
+              "currentLocation": "Colombo",
+              "capacityKg": 8000,
+              "usedKg": 5100,
+              "availableAtMinutes": 60,
+              "driverName": "Mahesh Gunasekara",
+              "costPerKm": 3.1
+            },
+            "score": 0.6842,
+            "profit": 980
+          }
+        ],
+        "totalProfit": 3680,
+        "totalScore": 3.1123,
+        "executionTimeMs": 0.4539,
+        "statesExplored": 40
+      },
+      "qualityMetrics": {
+        "profitApproximationRatio": 100,
+        "scoreApproximationRatio": 100,
+        "profitGap": 0,
+        "scoreGap": 0,
+        "speedupFactor": 149.8,
+        "isOptimal": true
+      },
+      "analysisExplanation": "High heuristic efficiency: Greedy decision achieved 100% of global optimal profit with a 149.8x speedup, demonstrating that polynomial heuristic decision scoring achieves near-perfect allocation without exponential overhead."
+    },
+    {
+      "instanceSize": {
+        "ordersCount": 5,
+        "trucksCount": 10
+      },
+      "exhaustiveOptimal": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 9,
+              "code": "TRK-09",
+              "model": "Volvo FL 12T",
+              "currentLocation": "Kandy",
+              "capacityKg": 12000,
+              "usedKg": 5850,
+              "availableAtMinutes": 90,
+              "driverName": "Anura Wickramasinghe",
+              "costPerKm": 4.2
+            },
+            "score": 0.6534,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 5,
+              "code": "TRK-05",
+              "model": "Hino 500 Series",
+              "currentLocation": "Galle",
+              "capacityKg": 7500,
+              "usedKg": 4600,
+              "availableAtMinutes": 30,
+              "driverName": "Chaminda Rajapakse",
+              "costPerKm": 2.9
+            },
+            "score": 0.653,
+            "profit": 620
+          },
+          {
+            "order": {
+              "id": 103,
+              "trackingNumber": "ORD-9823",
+              "destination": "Jaffna",
+              "weight": 2200,
+              "profit": 1250,
+              "deadlineMinutes": 600,
+              "priority": 5,
+              "createdAt": "2026-08-26 11:00",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4300,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.6993,
+            "profit": 1250
+          },
+          {
+            "order": {
+              "id": 104,
+              "trackingNumber": "ORD-9824",
+              "destination": "Trincomalee",
+              "weight": 650,
+              "profit": 380,
+              "deadlineMinutes": 360,
+              "priority": 2,
+              "createdAt": "2026-08-26 11:45",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2150,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.4458,
+            "profit": 380
+          },
+          {
+            "order": {
+              "id": 105,
+              "trackingNumber": "ORD-9825",
+              "destination": "Matara",
+              "weight": 3100,
+              "profit": 980,
+              "deadlineMinutes": 300,
+              "priority": 4,
+              "createdAt": "2026-08-26 12:20",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 7,
+              "code": "TRK-07",
+              "model": "Isuzu Forward 8T",
+              "currentLocation": "Colombo",
+              "capacityKg": 8000,
+              "usedKg": 5100,
+              "availableAtMinutes": 60,
+              "driverName": "Mahesh Gunasekara",
+              "costPerKm": 3.1
+            },
+            "score": 0.6842,
+            "profit": 980
+          }
+        ],
+        "totalProfit": 3680,
+        "totalScore": 3.1357,
+        "executionTimeMs": 119.5667,
+        "statesExplored": 23683
+      },
+      "greedyHeuristic": {
+        "assignments": [
+          {
+            "order": {
+              "id": 101,
+              "trackingNumber": "ORD-9821",
+              "destination": "Kandy",
+              "weight": 850,
+              "profit": 450,
+              "deadlineMinutes": 180,
+              "priority": 4,
+              "createdAt": "2026-08-26 09:30",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 9,
+              "code": "TRK-09",
+              "model": "Volvo FL 12T",
+              "currentLocation": "Kandy",
+              "capacityKg": 12000,
+              "usedKg": 5850,
+              "availableAtMinutes": 90,
+              "driverName": "Anura Wickramasinghe",
+              "costPerKm": 4.2
+            },
+            "score": 0.6534,
+            "profit": 450
+          },
+          {
+            "order": {
+              "id": 102,
+              "trackingNumber": "ORD-9822",
+              "destination": "Galle",
+              "weight": 1400,
+              "profit": 620,
+              "deadlineMinutes": 240,
+              "priority": 3,
+              "createdAt": "2026-08-26 10:15",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 5,
+              "code": "TRK-05",
+              "model": "Hino 500 Series",
+              "currentLocation": "Galle",
+              "capacityKg": 7500,
+              "usedKg": 4600,
+              "availableAtMinutes": 30,
+              "driverName": "Chaminda Rajapakse",
+              "costPerKm": 2.9
+            },
+            "score": 0.653,
+            "profit": 620
+          },
+          {
+            "order": {
+              "id": 103,
+              "trackingNumber": "ORD-9823",
+              "destination": "Jaffna",
+              "weight": 2200,
+              "profit": 1250,
+              "deadlineMinutes": 600,
+              "priority": 5,
+              "createdAt": "2026-08-26 11:00",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 6,
+              "code": "TRK-06",
+              "model": "Ashok Leyland Boss",
+              "currentLocation": "Anuradhapura",
+              "capacityKg": 5500,
+              "usedKg": 4300,
+              "availableAtMinutes": 10,
+              "driverName": "Rohan Jayawardena",
+              "costPerKm": 2.4
+            },
+            "score": 0.6993,
+            "profit": 1250
+          },
+          {
+            "order": {
+              "id": 104,
+              "trackingNumber": "ORD-9824",
+              "destination": "Trincomalee",
+              "weight": 650,
+              "profit": 380,
+              "deadlineMinutes": 360,
+              "priority": 2,
+              "createdAt": "2026-08-26 11:45",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 4,
+              "code": "TRK-04",
+              "model": "Eicher Pro 3008",
+              "currentLocation": "Kurunegala",
+              "capacityKg": 5000,
+              "usedKg": 2150,
+              "availableAtMinutes": 20,
+              "driverName": "Dinesh Bandara",
+              "costPerKm": 2.2
+            },
+            "score": 0.4458,
+            "profit": 380
+          },
+          {
+            "order": {
+              "id": 105,
+              "trackingNumber": "ORD-9825",
+              "destination": "Matara",
+              "weight": 3100,
+              "profit": 980,
+              "deadlineMinutes": 300,
+              "priority": 4,
+              "createdAt": "2026-08-26 12:20",
+              "status": "PENDING"
+            },
+            "truck": {
+              "id": 7,
+              "code": "TRK-07",
+              "model": "Isuzu Forward 8T",
+              "currentLocation": "Colombo",
+              "capacityKg": 8000,
+              "usedKg": 5100,
+              "availableAtMinutes": 60,
+              "driverName": "Mahesh Gunasekara",
+              "costPerKm": 3.1
+            },
+            "score": 0.6842,
+            "profit": 980
+          }
+        ],
+        "totalProfit": 3680,
+        "totalScore": 3.1357,
+        "executionTimeMs": 0.2039,
+        "statesExplored": 50
+      },
+      "qualityMetrics": {
+        "profitApproximationRatio": 100,
+        "scoreApproximationRatio": 100,
+        "profitGap": 0,
+        "scoreGap": 0,
+        "speedupFactor": 586.4,
+        "isOptimal": true
+      },
+      "analysisExplanation": "High heuristic efficiency: Greedy decision achieved 100% of global optimal profit with a 586.4x speedup, demonstrating that polynomial heuristic decision scoring achieves near-perfect allocation without exponential overhead."
+    }
+  ]
+}
