@@ -1,4 +1,8 @@
 /build_simplified_report.py
-/node_modules
+node_modules
+**/node_modules
+dist
+**/dist
 /PDSA CW - Module 4 Decision Module.md
 /__pycache__
+.DS_Store
