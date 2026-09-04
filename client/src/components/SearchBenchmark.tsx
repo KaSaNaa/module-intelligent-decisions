@@ -40,7 +40,7 @@ export const SearchBenchmark: React.FC = () => {
       {
         label: 'Binary Search [O(log m)] (Primary)',
         data: searchData.map(d => d.binarySearchComparisons),
-        borderColor: '#10b981',
+        borderColor: '#15803d',
         backgroundColor: 'rgba(16, 185, 129, 0.1)',
         borderWidth: 3,
         tension: 0.2,
@@ -77,7 +77,7 @@ export const SearchBenchmark: React.FC = () => {
       {
         label: 'Binary Search Time (ms)',
         data: searchData.map(d => d.binarySearchTimeMs),
-        borderColor: '#10b981',
+        borderColor: '#15803d',
         borderWidth: 3,
         tension: 0.2,
         pointRadius: 5
@@ -109,28 +109,28 @@ export const SearchBenchmark: React.FC = () => {
       legend: {
         position: 'top' as const,
         labels: {
-          color: '#cbd5e1',
+          color: '#475569',
           font: { family: 'Inter', size: 12 }
         }
       },
       tooltip: {
         mode: 'index' as const,
         intersect: false,
-        backgroundColor: 'rgba(15, 23, 42, 0.95)',
-        titleColor: '#ffffff',
-        bodyColor: '#cbd5e1',
-        borderColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: '#ffffff',
+        titleColor: '#1e293b',
+        bodyColor: '#475569',
+        borderColor: 'rgba(15, 23, 42, 0.12)',
         borderWidth: 1
       }
     },
     scales: {
       x: {
-        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-        ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono' } }
+        grid: { color: 'rgba(15, 23, 42, 0.08)' },
+        ticks: { color: '#64748b', font: { family: 'monospace' } }
       },
       y: {
-        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-        ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono' } }
+        grid: { color: 'rgba(15, 23, 42, 0.08)' },
+        ticks: { color: '#64748b', font: { family: 'monospace' } }
       }
     }
   };
@@ -150,7 +150,7 @@ export const SearchBenchmark: React.FC = () => {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
           <div>
             <h3 style={{ fontSize: '1rem', fontWeight: 600 }}>Delivery Slot Lookup Benchmark</h3>
-            <p style={{ fontSize: '0.8rem', color: '#94a3b8' }}>Target element in 75th percentile of sorted schedule array</p>
+            <p style={{ fontSize: '0.8rem', color: '#64748b' }}>Target element in 75th percentile of sorted schedule array</p>
           </div>
 
           <button
@@ -215,8 +215,8 @@ export const SearchBenchmark: React.FC = () => {
                 const compRatio = (d.linearSearchComparisons / Math.max(1, d.binarySearchComparisons)).toFixed(0);
                 return (
                   <tr key={d.m}>
-                    <td className="font-mono" style={{ fontWeight: 600, color: '#f8fafc' }}>{d.m.toLocaleString()}</td>
-                    <td className="font-mono" style={{ color: '#10b981', fontWeight: 700 }}>
+                    <td className="font-mono" style={{ fontWeight: 600, color: '#1e293b' }}>{d.m.toLocaleString()}</td>
+                    <td className="font-mono" style={{ color: '#15803d', fontWeight: 700 }}>
                       {d.binarySearchComparisons} comps ({d.binarySearchTimeMs.toFixed(5)} ms)
                     </td>
                     <td className="font-mono" style={{ color: '#f59e0b' }}>
@@ -225,7 +225,7 @@ export const SearchBenchmark: React.FC = () => {
                     <td className="font-mono" style={{ color: '#ef4444' }}>
                       {d.linearSearchComparisons.toLocaleString()} comps ({d.linearSearchTimeMs.toFixed(5)} ms)
                     </td>
-                    <td className="font-mono" style={{ color: '#38bdf8', fontWeight: 700 }}>
+                    <td className="font-mono" style={{ color: '#0284c7', fontWeight: 700 }}>
                       {Number(compRatio).toLocaleString()}x fewer ops
                     </td>
                     <td>
@@ -245,7 +245,7 @@ export const SearchBenchmark: React.FC = () => {
           <CheckCircle2 size={18} className="text-emerald-400" />
           <span>Search Strategy Architecture & Performance Analysis</span>
         </div>
-        <div style={{ fontSize: '0.88rem', color: '#cbd5e1', lineHeight: '1.6' }}>
+        <div style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6' }}>
           <p style={{ marginBottom: '12px' }}>
             <strong>Why Binary Search is Selected:</strong> Delivery schedule slots and capacity ranges are naturally sorted. Binary Search reduces the search space by half at each step, taking at most 20 comparisons for 1,000,000 slots. This provides sub-millisecond slot resolution (O(log m)), essential for real-time dispatch pipelines.
           </p>

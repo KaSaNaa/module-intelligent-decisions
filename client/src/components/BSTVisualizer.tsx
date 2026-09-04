@@ -61,17 +61,17 @@ export const BSTVisualizer: React.FC = () => {
         <div 
           className="tree-node-card"
           style={{
-            borderColor: searchResult?.node?.key === node.key ? '#38bdf8' : 'rgba(99, 102, 241, 0.4)',
-            background: searchResult?.node?.key === node.key ? 'rgba(56, 189, 248, 0.25)' : 'rgba(30, 41, 59, 0.85)'
+            borderColor: searchResult?.node?.key === node.key ? '#0284c7' : 'rgba(37, 99, 235, 0.4)',
+            background: searchResult?.node?.key === node.key ? 'rgba(2, 132, 199, 0.12)' : '#f1f5f9'
           }}
         >
-          <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#f8fafc' }}>
+          <div style={{ fontWeight: 700, fontSize: '0.9rem', color: '#1e293b' }}>
             ID #{node.key}
           </div>
-          <div style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
+          <div style={{ fontSize: '0.72rem', color: '#64748b' }}>
             {node.payload?.code || `Node-${node.key}`}
           </div>
-          <div style={{ fontSize: '0.68rem', color: '#a855f7', marginTop: '2px', fontFamily: 'var(--font-mono)' }}>
+          <div style={{ fontSize: '0.68rem', color: '#9333ea', marginTop: '2px', fontFamily: 'var(--font-mono)' }}>
             h:{node.height} | bf:{node.balanceFactor}
           </div>
         </div>
@@ -126,9 +126,9 @@ export const BSTVisualizer: React.FC = () => {
           </form>
 
           {searchResult && (
-            <div style={{ background: 'rgba(0,0,0,0.3)', padding: '14px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.06)' }}>
+            <div style={{ background: '#f8fafc', padding: '14px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                <span style={{ fontWeight: 600, color: searchResult.found ? '#10b981' : '#f43f5e' }}>
+                <span style={{ fontWeight: 600, color: searchResult.found ? '#15803d' : '#dc2626' }}>
                   {searchResult.found ? '✓ Record Found' : '✗ Record Not Found'}
                 </span>
                 <span className="font-mono text-xs text-cyan-400 font-bold">
@@ -136,10 +136,10 @@ export const BSTVisualizer: React.FC = () => {
                 </span>
               </div>
               {searchResult.found && (
-                <div style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
-                  <div>Model: <strong style={{ color: '#fff' }}>{searchResult.node.value.model}</strong></div>
-                  <div>Location: <strong style={{ color: '#fff' }}>{searchResult.node.value.currentLocation}</strong></div>
-                  <div>Capacity: <strong style={{ color: '#10b981' }}>{searchResult.node.value.capacityKg} kg</strong></div>
+                <div style={{ fontSize: '0.8rem', color: '#64748b' }}>
+                  <div>Model: <strong style={{ color: '#1e293b' }}>{searchResult.node.value.model}</strong></div>
+                  <div>Location: <strong style={{ color: '#1e293b' }}>{searchResult.node.value.currentLocation}</strong></div>
+                  <div>Capacity: <strong style={{ color: '#15803d' }}>{searchResult.node.value.capacityKg} kg</strong></div>
                 </div>
               )}
             </div>
@@ -148,7 +148,7 @@ export const BSTVisualizer: React.FC = () => {
           {/* Tree Statistics */}
           {bstData && (
             <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)' }}>
-              <h4 style={{ fontSize: '0.85rem', fontWeight: 600, color: '#94a3b8', marginBottom: '10px', textTransform: 'uppercase' }}>
+              <h4 style={{ fontSize: '0.85rem', fontWeight: 600, color: '#64748b', marginBottom: '10px', textTransform: 'uppercase' }}>
                 Tree Complexity Metrics
               </h4>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '0.82rem' }}>
@@ -159,8 +159,8 @@ export const BSTVisualizer: React.FC = () => {
               </div>
 
               <div style={{ marginTop: '14px' }}>
-                <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginBottom: '4px' }}>IN-ORDER TRAVERSAL (SORTED KEYS):</div>
-                <div className="font-mono" style={{ fontSize: '0.78rem', color: '#38bdf8', background: 'rgba(0,0,0,0.3)', padding: '6px 10px', borderRadius: '4px' }}>
+                <div style={{ fontSize: '0.75rem', color: '#64748b', marginBottom: '4px' }}>IN-ORDER TRAVERSAL (SORTED KEYS):</div>
+                <div className="font-mono" style={{ fontSize: '0.78rem', color: '#0284c7', background: '#f8fafc', padding: '6px 10px', borderRadius: '4px' }}>
                   [{bstData.inOrder.map(n => n.key).join(' → ')}]
                 </div>
               </div>
@@ -199,10 +199,10 @@ export const BSTVisualizer: React.FC = () => {
           <div className="grid-2" style={{ marginTop: '16px' }}>
             {/* Balanced Tree */}
             <div style={{ background: 'rgba(16, 185, 129, 0.05)', border: '1px solid rgba(16, 185, 129, 0.2)', padding: '16px', borderRadius: '10px' }}>
-              <h4 style={{ color: '#34d399', fontSize: '0.95rem', fontWeight: 700, marginBottom: '6px' }}>
+              <h4 style={{ color: '#15803d', fontSize: '0.95rem', fontWeight: 700, marginBottom: '6px' }}>
                 ✓ Balanced Tree Insertion (Optimal)
               </h4>
-              <div style={{ fontSize: '0.82rem', color: '#cbd5e1', marginBottom: '12px' }}>
+              <div style={{ fontSize: '0.82rem', color: '#475569', marginBottom: '12px' }}>
                 Keys partitioned evenly at root and subtrees:
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '0.82rem', marginBottom: '12px' }}>
@@ -214,10 +214,10 @@ export const BSTVisualizer: React.FC = () => {
 
             {/* Skewed Tree */}
             <div style={{ background: 'rgba(244, 63, 94, 0.05)', border: '1px solid rgba(244, 63, 94, 0.2)', padding: '16px', borderRadius: '10px' }}>
-              <h4 style={{ color: '#fb7185', fontSize: '0.95rem', fontWeight: 700, marginBottom: '6px' }}>
+              <h4 style={{ color: '#e11d48', fontSize: '0.95rem', fontWeight: 700, marginBottom: '6px' }}>
                 ✗ Skewed Tree Degeneration (Worst Case)
               </h4>
-              <div style={{ fontSize: '0.82rem', color: '#cbd5e1', marginBottom: '12px' }}>
+              <div style={{ fontSize: '0.82rem', color: '#475569', marginBottom: '12px' }}>
                 Keys inserted sequentially (1, 2, 3, ...), degrading into a linked list:
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '0.82rem', marginBottom: '12px' }}>
@@ -228,7 +228,7 @@ export const BSTVisualizer: React.FC = () => {
             </div>
           </div>
 
-          <div style={{ marginTop: '16px', fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5' }}>
+          <div style={{ marginTop: '16px', fontSize: '0.85rem', color: '#64748b', lineHeight: '1.5' }}>
             <strong>Engineering Trade-off Note:</strong> <em>"While standard BST offers O(log n) average search for dynamic records, it carries the limitation of degenerating into an O(n) linear chain when items are inserted in monotonic sorted order. For production systems requiring strict guaranteed O(log n) worst-case bounds, self-balancing trees (AVL or Red-Black Trees) or array-backed binary heaps are preferred."</em>
           </div>
         </div>

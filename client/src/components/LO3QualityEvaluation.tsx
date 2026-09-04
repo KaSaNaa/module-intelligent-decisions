@@ -131,7 +131,7 @@ export const LO3QualityEvaluation: React.FC = () => {
           {/* Key Metrics Cards */}
           <div className="grid-3" style={{ marginBottom: '24px' }}>
             <div className="gauge-card">
-              <div style={{ fontSize: '0.8rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>
+              <div style={{ fontSize: '0.8rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 600 }}>
                 Profit Approximation Ratio
               </div>
               <div className="gauge-value">
@@ -143,10 +143,10 @@ export const LO3QualityEvaluation: React.FC = () => {
             </div>
 
             <div className="gauge-card">
-              <div style={{ fontSize: '0.8rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>
+              <div style={{ fontSize: '0.8rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 600 }}>
                 Quality Deficit / Gap
               </div>
-              <div className="gauge-value" style={{ color: evalResult.qualityMetrics.profitGap === 0 ? '#10b981' : '#f59e0b' }}>
+              <div className="gauge-value" style={{ color: evalResult.qualityMetrics.profitGap === 0 ? '#15803d' : '#f59e0b' }}>
                 ${evalResult.qualityMetrics.profitGap}
               </div>
               <div className="gauge-sub">
@@ -155,10 +155,10 @@ export const LO3QualityEvaluation: React.FC = () => {
             </div>
 
             <div className="gauge-card">
-              <div style={{ fontSize: '0.8rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 600 }}>
+              <div style={{ fontSize: '0.8rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 600 }}>
                 Algorithmic Speedup
               </div>
-              <div className="gauge-value" style={{ color: '#38bdf8' }}>
+              <div className="gauge-value" style={{ color: '#0284c7' }}>
                 {evalResult.qualityMetrics.speedupFactor}x
               </div>
               <div className="gauge-sub">
@@ -177,14 +177,14 @@ export const LO3QualityEvaluation: React.FC = () => {
               </div>
               <p className="card-desc">Explores all {evalResult.instanceSize.trucksCount}^{evalResult.instanceSize.ordersCount} permutation branches</p>
 
-              <div style={{ background: 'rgba(0,0,0,0.3)', padding: '12px', borderRadius: '8px', marginBottom: '14px', fontSize: '0.85rem' }}>
+              <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', marginBottom: '14px', fontSize: '0.85rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                   <span>Total Optimal Profit:</span>
-                  <strong style={{ color: '#10b981' }}>${evalResult.exhaustiveOptimal.totalProfit}</strong>
+                  <strong style={{ color: '#15803d' }}>${evalResult.exhaustiveOptimal.totalProfit}</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                   <span>Total Decision Score:</span>
-                  <strong style={{ color: '#38bdf8' }}>{evalResult.exhaustiveOptimal.totalScore.toFixed(4)}</strong>
+                  <strong style={{ color: '#0284c7' }}>{evalResult.exhaustiveOptimal.totalScore.toFixed(4)}</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                   <span>Compute Latency:</span>
@@ -196,15 +196,15 @@ export const LO3QualityEvaluation: React.FC = () => {
                 </div>
               </div>
 
-              <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#94a3b8', marginBottom: '8px' }}>
+              <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#64748b', marginBottom: '8px' }}>
                 GLOBAL OPTIMAL ASSIGNMENTS
               </div>
               {evalResult.exhaustiveOptimal.assignments.map((a, idx) => (
-                <div key={idx} style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '8px 12px', borderRadius: '6px', marginBottom: '6px', fontSize: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: '1px solid rgba(255,255,255,0.04)' }}>
+                <div key={idx} style={{ background: '#f8fafc', padding: '8px 12px', borderRadius: '6px', marginBottom: '6px', fontSize: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: '1px solid #e2e8f0' }}>
                   <div>
-                    <strong style={{ color: '#fff' }}>{a.order.trackingNumber}</strong> ({a.order.destination}, {a.order.weight}kg)
+                    <strong style={{ color: '#1e293b' }}>{a.order.trackingNumber}</strong> ({a.order.destination}, {a.order.weight}kg)
                   </div>
-                  <div style={{ color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>
+                  <div style={{ color: '#0284c7', fontFamily: 'var(--font-mono)' }}>
                     → {a.truck.code} (${a.profit})
                   </div>
                 </div>
@@ -219,14 +219,14 @@ export const LO3QualityEvaluation: React.FC = () => {
               </div>
               <p className="card-desc">Real-time polynomial multi-criteria scoring algorithm</p>
 
-              <div style={{ background: 'rgba(0,0,0,0.3)', padding: '12px', borderRadius: '8px', marginBottom: '14px', fontSize: '0.85rem' }}>
+              <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', marginBottom: '14px', fontSize: '0.85rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                   <span>Total Heuristic Profit:</span>
-                  <strong style={{ color: '#10b981' }}>${evalResult.greedyHeuristic.totalProfit}</strong>
+                  <strong style={{ color: '#15803d' }}>${evalResult.greedyHeuristic.totalProfit}</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                   <span>Total Decision Score:</span>
-                  <strong style={{ color: '#38bdf8' }}>{evalResult.greedyHeuristic.totalScore.toFixed(4)}</strong>
+                  <strong style={{ color: '#0284c7' }}>{evalResult.greedyHeuristic.totalScore.toFixed(4)}</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                   <span>Compute Latency:</span>
@@ -238,15 +238,15 @@ export const LO3QualityEvaluation: React.FC = () => {
                 </div>
               </div>
 
-              <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#94a3b8', marginBottom: '8px' }}>
+              <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#64748b', marginBottom: '8px' }}>
                 GREEDY HEURISTIC ASSIGNMENTS
               </div>
               {evalResult.greedyHeuristic.assignments.map((a, idx) => (
-                <div key={idx} style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '8px 12px', borderRadius: '6px', marginBottom: '6px', fontSize: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: '1px solid rgba(255,255,255,0.04)' }}>
+                <div key={idx} style={{ background: '#f8fafc', padding: '8px 12px', borderRadius: '6px', marginBottom: '6px', fontSize: '0.8rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: '1px solid #e2e8f0' }}>
                   <div>
-                    <strong style={{ color: '#fff' }}>{a.order.trackingNumber}</strong> ({a.order.destination}, {a.order.weight}kg)
+                    <strong style={{ color: '#1e293b' }}>{a.order.trackingNumber}</strong> ({a.order.destination}, {a.order.weight}kg)
                   </div>
-                  <div style={{ color: '#10b981', fontFamily: 'var(--font-mono)' }}>
+                  <div style={{ color: '#15803d', fontFamily: 'var(--font-mono)' }}>
                     → {a.truck.code} (${a.profit})
                   </div>
                 </div>
@@ -260,7 +260,7 @@ export const LO3QualityEvaluation: React.FC = () => {
               <CheckCircle2 size={18} className="text-emerald-400" />
               <span>Optimality & Quality Evaluation Summary</span>
             </div>
-            <p style={{ fontSize: '0.88rem', color: '#cbd5e1', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6' }}>
               {evalResult.analysisExplanation}
             </p>
           </div>

@@ -166,19 +166,19 @@ export const DecisionConsole: React.FC = () => {
 
           {/* Selected Order Summary Card */}
           {selectedOrder && (
-            <div style={{ background: 'rgba(0,0,0,0.3)', padding: '12px', borderRadius: '8px', marginBottom: '16px', border: '1px solid rgba(255,255,255,0.06)' }}>
+            <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', marginBottom: '16px', border: '1px solid #e2e8f0' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                <span className="font-mono" style={{ color: '#38bdf8', fontWeight: 600 }}>{selectedOrder.trackingNumber}</span>
+                <span className="font-mono" style={{ color: '#0284c7', fontWeight: 600 }}>{selectedOrder.trackingNumber}</span>
                 <span className={`badge ${selectedOrder.status === 'PENDING' ? 'badge-status' : 'badge-opt'}`}>
                   {selectedOrder.status}
                 </span>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '0.8rem', color: '#94a3b8' }}>
-                <div>Destination: <strong style={{ color: '#fff' }}>{selectedOrder.destination}</strong></div>
-                <div>Weight: <strong style={{ color: '#fff' }}>{selectedOrder.weight} kg</strong></div>
-                <div>Profit: <strong style={{ color: '#10b981' }}>${selectedOrder.profit}</strong></div>
-                <div>Deadline: <strong style={{ color: '#fbbf24' }}>{selectedOrder.deadlineMinutes} mins</strong></div>
-                <div>Priority: <strong style={{ color: '#a855f7' }}>Level {selectedOrder.priority}/5</strong></div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', fontSize: '0.8rem', color: '#64748b' }}>
+                <div>Destination: <strong style={{ color: '#1e293b' }}>{selectedOrder.destination}</strong></div>
+                <div>Weight: <strong style={{ color: '#1e293b' }}>{selectedOrder.weight} kg</strong></div>
+                <div>Profit: <strong style={{ color: '#15803d' }}>${selectedOrder.profit}</strong></div>
+                <div>Deadline: <strong style={{ color: '#b45309' }}>{selectedOrder.deadlineMinutes} mins</strong></div>
+                <div>Priority: <strong style={{ color: '#9333ea' }}>Level {selectedOrder.priority}/5</strong></div>
               </div>
             </div>
           )}
@@ -325,29 +325,29 @@ export const DecisionConsole: React.FC = () => {
               <div className="glass-card" style={{ marginBottom: '16px', padding: '16px 20px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                   <div>
-                    <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>ALGORITHM PIPELINE</div>
-                    <div style={{ fontWeight: 700, color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b' }}>ALGORITHM PIPELINE</div>
+                    <div style={{ fontWeight: 700, color: '#0284c7', fontFamily: 'var(--font-mono)' }}>
                       {decisionResult.algorithmUsed} + {decisionResult.slotSearchUsed}
                     </div>
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>EXECUTION TIME</div>
-                    <div style={{ fontWeight: 700, color: '#10b981', fontFamily: 'var(--font-mono)' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b' }}>EXECUTION TIME</div>
+                    <div style={{ fontWeight: 700, color: '#15803d', fontFamily: 'var(--font-mono)' }}>
                       {decisionResult.executionTimeMs.toFixed(3)} ms
                     </div>
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>FLEET CANDIDATES</div>
-                    <div style={{ fontWeight: 700, color: '#f8fafc', fontFamily: 'var(--font-mono)' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b' }}>FLEET CANDIDATES</div>
+                    <div style={{ fontWeight: 700, color: '#1e293b', fontFamily: 'var(--font-mono)' }}>
                       {decisionResult.feasibleCandidatesCount} / {decisionResult.candidatesEvaluated} Feasible
                     </div>
                   </div>
 
                   <div>
-                    <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>DSA OPERATIONS</div>
-                    <div style={{ fontWeight: 700, color: '#a855f7', fontFamily: 'var(--font-mono)' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b' }}>DSA OPERATIONS</div>
+                    <div style={{ fontWeight: 700, color: '#9333ea', fontFamily: 'var(--font-mono)' }}>
                       {decisionResult.operationsCount} ops
                     </div>
                   </div>
@@ -376,10 +376,10 @@ export const DecisionConsole: React.FC = () => {
                           RANK #{rec.rank}
                         </span>
                         <div>
-                          <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#f8fafc' }}>
+                          <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#1e293b' }}>
                             {rec.truck.code} • {rec.truck.model}
                           </h3>
-                          <div style={{ fontSize: '0.8rem', color: '#94a3b8', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <div style={{ fontSize: '0.8rem', color: '#64748b', display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <span>Driver: <strong>{rec.truck.driverName}</strong></span>
                             <span>•</span>
                             <span style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
@@ -399,7 +399,7 @@ export const DecisionConsole: React.FC = () => {
                     <div className="rec-stats">
                       <div className="stat-box">
                         <div className="stat-label">Scheduled Slot</div>
-                        <div className="stat-value" style={{ color: '#38bdf8' }}>+{rec.slotMinutes} mins</div>
+                        <div className="stat-value" style={{ color: '#0284c7' }}>+{rec.slotMinutes} mins</div>
                       </div>
                       <div className="stat-box">
                         <div className="stat-label">Transit Distance</div>
@@ -411,7 +411,7 @@ export const DecisionConsole: React.FC = () => {
                       </div>
                       <div className="stat-box">
                         <div className="stat-label">Capacity Post-Load</div>
-                        <div className="stat-value" style={{ color: '#10b981' }}>
+                        <div className="stat-value" style={{ color: '#15803d' }}>
                           {(rec.truck.usedKg + decisionResult.order.weight).toFixed(0)} / {rec.truck.capacityKg} kg
                         </div>
                       </div>
@@ -419,7 +419,7 @@ export const DecisionConsole: React.FC = () => {
 
                     {/* Multi-Criteria Score Breakdown Bar */}
                     <div className="breakdown-container">
-                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#94a3b8' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#64748b' }}>
                         <span>Heuristic Factor Contribution</span>
                         <span>Score: {rec.score.toFixed(4)}</span>
                       </div>
@@ -448,14 +448,14 @@ export const DecisionConsole: React.FC = () => {
                       <div className="breakdown-legend">
                         <div className="legend-item"><span className="legend-dot" style={{ background: '#3b82f6' }} /> Profit ({rec.scoreBreakdown.profitTerm.toFixed(3)})</div>
                         <div className="legend-item"><span className="legend-dot" style={{ background: '#f59e0b' }} /> Urgency ({rec.scoreBreakdown.urgencyTerm.toFixed(3)})</div>
-                        <div className="legend-item"><span className="legend-dot" style={{ background: '#10b981' }} /> Distance ({rec.scoreBreakdown.costTerm.toFixed(3)})</div>
-                        <div className="legend-item"><span className="legend-dot" style={{ background: '#a855f7' }} /> Fit ({rec.scoreBreakdown.fitTerm.toFixed(3)})</div>
+                        <div className="legend-item"><span className="legend-dot" style={{ background: '#15803d' }} /> Distance ({rec.scoreBreakdown.costTerm.toFixed(3)})</div>
+                        <div className="legend-item"><span className="legend-dot" style={{ background: '#9333ea' }} /> Fit ({rec.scoreBreakdown.fitTerm.toFixed(3)})</div>
                       </div>
                     </div>
 
                     {/* Operational justifications */}
                     <div style={{ marginBottom: '14px' }}>
-                      <div style={{ fontSize: '0.78rem', fontWeight: 600, color: '#94a3b8', textTransform: 'uppercase', marginBottom: '6px' }}>
+                      <div style={{ fontSize: '0.78rem', fontWeight: 600, color: '#64748b', textTransform: 'uppercase', marginBottom: '6px' }}>
                         Assignment Reasoning
                       </div>
                       <ul className="reasons-list">
@@ -487,7 +487,7 @@ export const DecisionConsole: React.FC = () => {
             <div className="glass-card" style={{ textAlign: 'center', padding: '60px 20px' }}>
               <TruckIcon size={48} style={{ color: '#475569', margin: '0 auto 16px auto' }} />
               <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: '8px' }}>Ready to Generate Dispatch Recommendations</h3>
-              <p style={{ color: '#94a3b8', maxWidth: '450px', margin: '0 auto 20px auto', fontSize: '0.9rem' }}>
+              <p style={{ color: '#64748b', maxWidth: '450px', margin: '0 auto 20px auto', fontSize: '0.9rem' }}>
                 Select an active order on the left panel and click <strong>"Run Decision Engine"</strong> to execute the multi-objective scoring and Min-Heap Top-k ranking pipeline.
               </p>
               <button 

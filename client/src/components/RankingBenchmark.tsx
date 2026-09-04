@@ -63,7 +63,7 @@ export const RankingBenchmark: React.FC = () => {
       {
         label: 'Min-Heap Top-K [O(n log k)] (Primary)',
         data: benchmarkData.map(d => d.heapTimeMs),
-        borderColor: '#38bdf8',
+        borderColor: '#0284c7',
         backgroundColor: 'rgba(56, 189, 248, 0.1)',
         borderWidth: 3,
         tension: 0.3,
@@ -73,7 +73,7 @@ export const RankingBenchmark: React.FC = () => {
       {
         label: 'Merge Sort [O(n log n)] (Full Sort)',
         data: benchmarkData.map(d => d.mergeSortTimeMs),
-        borderColor: '#f43f5e',
+        borderColor: '#dc2626',
         backgroundColor: 'rgba(244, 63, 94, 0.05)',
         borderWidth: 2,
         tension: 0.3,
@@ -83,7 +83,7 @@ export const RankingBenchmark: React.FC = () => {
       {
         label: 'Linear Scan [O(n·k)] (Baseline)',
         data: benchmarkData.map(d => d.linearScanTimeMs),
-        borderColor: '#fbbf24',
+        borderColor: '#b45309',
         backgroundColor: 'rgba(251, 191, 36, 0.05)',
         borderWidth: 2,
         borderDash: [5, 5],
@@ -100,7 +100,7 @@ export const RankingBenchmark: React.FC = () => {
       {
         label: 'Heap Operations (Comparisons + Swaps)',
         data: benchmarkData.map(d => d.heapOperations),
-        borderColor: '#38bdf8',
+        borderColor: '#0284c7',
         backgroundColor: 'rgba(56, 189, 248, 0.1)',
         borderWidth: 2,
         tension: 0.3,
@@ -109,7 +109,7 @@ export const RankingBenchmark: React.FC = () => {
       {
         label: 'Merge Sort Operations',
         data: benchmarkData.map(d => d.mergeSortOperations),
-        borderColor: '#f43f5e',
+        borderColor: '#dc2626',
         backgroundColor: 'rgba(244, 63, 94, 0.1)',
         borderWidth: 2,
         tension: 0.3,
@@ -118,7 +118,7 @@ export const RankingBenchmark: React.FC = () => {
       {
         label: 'Linear Scan Comparisons',
         data: benchmarkData.map(d => d.linearScanOperations),
-        borderColor: '#fbbf24',
+        borderColor: '#b45309',
         backgroundColor: 'rgba(251, 191, 36, 0.1)',
         borderWidth: 2,
         tension: 0.3,
@@ -134,28 +134,28 @@ export const RankingBenchmark: React.FC = () => {
       legend: {
         position: 'top' as const,
         labels: {
-          color: '#cbd5e1',
+          color: '#475569',
           font: { family: 'Inter', size: 12 }
         }
       },
       tooltip: {
         mode: 'index' as const,
         intersect: false,
-        backgroundColor: 'rgba(15, 23, 42, 0.95)',
-        titleColor: '#ffffff',
-        bodyColor: '#cbd5e1',
-        borderColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: '#ffffff',
+        titleColor: '#1e293b',
+        bodyColor: '#475569',
+        borderColor: 'rgba(15, 23, 42, 0.12)',
         borderWidth: 1
       }
     },
     scales: {
       x: {
-        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-        ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono' } }
+        grid: { color: 'rgba(15, 23, 42, 0.08)' },
+        ticks: { color: '#64748b', font: { family: 'monospace' } }
       },
       y: {
-        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-        ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono' } }
+        grid: { color: 'rgba(15, 23, 42, 0.08)' },
+        ticks: { color: '#64748b', font: { family: 'monospace' } }
       }
     }
   };
@@ -251,11 +251,11 @@ export const RankingBenchmark: React.FC = () => {
                 const speedup = (d.mergeSortTimeMs / Math.max(0.001, d.heapTimeMs)).toFixed(1);
                 return (
                   <tr key={d.n}>
-                    <td className="font-mono" style={{ fontWeight: 600, color: '#f8fafc' }}>{d.n.toLocaleString()}</td>
-                    <td className="font-mono" style={{ color: '#38bdf8' }}>{d.heapTimeMs.toFixed(4)} ms ({d.heapOperations.toLocaleString()} ops)</td>
-                    <td className="font-mono" style={{ color: '#f43f5e' }}>{d.mergeSortTimeMs.toFixed(4)} ms ({d.mergeSortOperations.toLocaleString()} ops)</td>
-                    <td className="font-mono" style={{ color: '#fbbf24' }}>{d.linearScanTimeMs.toFixed(4)} ms ({d.linearScanOperations.toLocaleString()} ops)</td>
-                    <td className="font-mono" style={{ color: '#10b981', fontWeight: 700 }}>{speedup}x Faster</td>
+                    <td className="font-mono" style={{ fontWeight: 600, color: '#1e293b' }}>{d.n.toLocaleString()}</td>
+                    <td className="font-mono" style={{ color: '#0284c7' }}>{d.heapTimeMs.toFixed(4)} ms ({d.heapOperations.toLocaleString()} ops)</td>
+                    <td className="font-mono" style={{ color: '#dc2626' }}>{d.mergeSortTimeMs.toFixed(4)} ms ({d.mergeSortOperations.toLocaleString()} ops)</td>
+                    <td className="font-mono" style={{ color: '#b45309' }}>{d.linearScanTimeMs.toFixed(4)} ms ({d.linearScanOperations.toLocaleString()} ops)</td>
+                    <td className="font-mono" style={{ color: '#15803d', fontWeight: 700 }}>{speedup}x Faster</td>
                     <td>
                       <span className="badge badge-opt">Production Engine</span>
                     </td>
@@ -273,7 +273,7 @@ export const RankingBenchmark: React.FC = () => {
           <CheckCircle2 size={18} className="text-emerald-400" />
           <span>Architectural Decision & Asymptotic Analysis</span>
         </div>
-        <div style={{ fontSize: '0.88rem', color: '#cbd5e1', lineHeight: '1.6' }}>
+        <div style={{ fontSize: '0.88rem', color: '#475569', lineHeight: '1.6' }}>
           <p style={{ marginBottom: '12px' }}>
             <strong>Why Min-Heap Top-k is Selected:</strong> In real-time logistics dispatch, operations dispatchers require only the top k = 3 to 5 candidate vehicles. A full merge sort performs redundant sorting on the remaining (n - k) candidates, wasting O(n log n) compute cycles. By maintaining a bounded min-heap of size k, each candidate requires at most O(log k) sift operations. Since k is small and constant, log k is effectively a constant factor, yielding linear O(n) latency.
           </p>
